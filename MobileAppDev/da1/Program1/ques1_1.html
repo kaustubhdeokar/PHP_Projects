@@ -1,0 +1,75 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+<link rel="stylesheet" href="ques1_1.css">
+</head>
+<body>
+    <img class="headerimages" src="link.png" style="padding:20px;">
+    <header class="head">
+    <nav>home</nav>
+    <nav>above</nav>
+    <nav>portfolio</nav>
+    <nav>services</nav>
+    <nav>testimonials</nav>
+    <nav>contact</nav>
+    </header>
+
+    <div class="holder">
+    <div class="one">
+    We are <mark class="red">Capsicum MediaWorks</mark> a creative design studio 
+    based in Mumbai, India.
+    </div>
+    <div class="two">
+    <br><br>
+    <mark class="green">What do we Do?</mark><br><br>
+    We design <mark class="green">user friendly</mark> and <mark class="green">
+    creative websites </mark>that are <mark class="green">accessible, cross browser
+    compatible</mark>, and <mark class="green">web standard compliant</mark> adding the 
+    perfect face to your website, e-commerce website or web blog
+    </div>            
+</div>
+
+<div class="images">
+<center><mark class="red2">Featured Work</mark></center><br>
+    <img class="myslides" src="img1.jpg" style="width:100%;height:50%;">
+    <img class="myslides" src="img2.jpeg" style="width:100%;height:50%;">
+    <img class="myslides" src="img3.jpeg" style="width:100%;height:50%;">
+</div> 
+<div class="sections">
+    <div class="column">
+    <center><mark class="red2">About Us</mark></center><br>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </div>
+    <div class="column">
+    <center><mark class="red2">Services</mark></center><br>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    </div>
+    <div class="column">
+    <center><mark class="red2">Contact Us</mark></center><br>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </div>
+    </div>
+    
+    <script>
+        var myindex=0;
+        carousel();
+        function carousel(){
+        var i;
+        var x=document.getElementsByClassName("myslides");
+        for(i=0;i<x.length;i++){
+        x[i].style.display="none";
+        }
+        myindex++;
+        if(myindex>x.length){myindex=1}
+        x[myindex-1].style.display="block";
+        setTimeout(carousel,2000);
+        }
+    </script>
+
+</body>
+</html>

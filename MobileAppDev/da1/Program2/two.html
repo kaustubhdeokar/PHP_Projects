@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two</title>
+<style type="text/css">
+	button{
+		width:125px;
+	}
+	button:onclick{
+		color:black;
+
+	}
+</style>
+
+</head>
+<body>
+	<canvas height="400" width="400" id="one"></canvas>
+	<p>
+	<button type="button" id="circle" onclick="circle()">
+		Circle
+	</button>
+	<button type="button" id="square" onclick="square()">
+		Square
+	</button>
+	<button type="button" id="triangle" onclick="triangle()">
+		Triangle
+	</button>
+	</p>
+	<script type="text/javascript">
+		function circle(){
+		var ctx=document.getElementById("one").getContext("2d");
+		ctx.fillStyle='#000000';
+		ctx.fillRect(0,0,400,400);
+		ctx.strokeStyle='#FFFFFF';
+		ctx.arc(200,200,100,0,2*Math.PI);
+		ctx.stroke();
+		}
+		function square(){
+		var ctx=document.getElementById("one").getContext("2d");
+		ctx.fillStyle="#000000";
+		ctx.fillRect(0,0,400,400);
+		ctx.strokeStyle='#FFFFFF';
+		ctx.moveTo(100,100);
+		ctx.lineTo(100,300);
+		ctx.lineTo(300,300);
+		ctx.lineTo(300,100);
+		ctx.lineTo(100,100);
+		ctx.stroke();
+		}
+		
+		function triangle(){
+		var ctx=document.getElementById("one").getContext("2d");
+		ctx.fillStyle='#000000';
+		ctx.fillRect(0,0,400,400);
+		ctx.strokeStyle='#FFFFFF';
+		ctx.moveTo(200,100);
+		ctx.lineTo(300,300);
+		ctx.lineTo(100,300);
+		ctx.lineTo(200,100);
+		ctx.stroke();
+		}
+
+
+	</script>
+
+
+
+</body>
+</html>

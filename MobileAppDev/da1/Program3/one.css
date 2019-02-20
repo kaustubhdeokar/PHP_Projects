@@ -1,0 +1,27 @@
+.in{
+	width:130px;
+	float:left;
+}
+#in1{
+	width:50px;
+}
+input.radio{
+	width:40px;
+}
+input{
+	width:140px;
+	border-radius: 2px;
+}
+input:hover{
+	color:blue;
+}
+.error{
+	color:red;
+}
+.in{
+	color:rgb(124,30,111);
+}
+
+legend{
+	color:blue;
+}

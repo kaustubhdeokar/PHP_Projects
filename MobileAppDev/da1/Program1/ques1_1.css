@@ -1,0 +1,76 @@
+body{
+    font-family: 'Abel';font-size: 22px;
+}
+div.holder{
+    float:right;
+    clear:right;
+    width:45%;
+    padding:20px;
+}
+div.images{
+    float:left;
+    clear:left;
+    width:45%;
+    padding:20px;
+}
+div.one{
+    float:right;
+    width:100%;
+    font-size:45px;
+    clear:right;
+}
+
+div.two{
+    float:left;
+    clear:right;
+    width:100%;
+    font-size:25px;
+}
+
+div.sections{
+    float:left;
+    clear:left;
+    width:100%;
+}
+div.column{
+    float:left;
+    width:30%;
+    padding:12px;
+}
+nav{
+    float:right;
+    padding:12px;
+    margin:10px;
+    border:1px solid black;
+    border-radius: 12px;
+    background:rgb(67, 79, 64);
+    color:white;
+}
+nav:hover{
+    border-bottom:2px solid white;
+    background:rgb(132, 42, 9);
+
+}
+img{
+    float:left;
+    clear:left;
+    width:200px;
+    height:90px;
+    padding:0px;
+    margin:0px;
+}
+mark.red2{
+    color:rgb(193, 51, 0);
+    background:none;
+    font-size:40px; 
+    text-align:center;  
+    text-decoration:bold; 
+}
+mark.green{
+    color:green;
+    background:none;
+}
+mark.red{
+    color:rgb(193, 51, 0);
+    background:none;
+}
