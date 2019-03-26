@@ -9,6 +9,11 @@
         width:100px;
         float:left;
         }
+        label1{
+        width:100px;
+        float:left;
+        color:red;
+        }
         table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
@@ -33,7 +38,7 @@
    
     <div class="container">
       
-        <h2>Complaints Page</h2>
+        <h2 id="header-2">Complaints Page</h2>
         <div class="col-sm-4">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <br>
@@ -83,22 +88,39 @@
             if(mysqli_connect_error()){
                 echo "connection lost";
             }
+
             else{
-                $sql2="delete from complaintstable where level=0";
-                $result=$conn->query($sql2);
-                
-            $sql="insert into complaintstable(username,level,status,complaint) values ('$user','$level','$status','$complaint')";
-                if($conn->query($sql)){
-                    echo "<br>";echo "<br>";echo "<br>";
-                    echo "query inserted successfully";
+                $sql="delete from complaintstable where level=0";
+                $result=$conn->query($sql);
+                $temp=0;
+
+                $sql2="select * from user";
+                $result2=$conn->query($sql2);
+                if($result2->num_rows>0){
+                    while($row2=$result2->fetch_assoc()){
+                        echo "here".$row2["username"];
+                        if($row2["username"]==='$user'){
+                            echo $row2["username"];
+                            $temp=1;
+                        }
+                        
+                    }
+
                 }
-                else{
-                    echo "not inserted";
+                if($temp==1){
+                    $sql="insert into complaintstable(username,level,status,complaint) values ('$user','$level','$status','$complaint')";
+                    if($conn->query($sql)){
+                        echo "<br>";echo "<br>";echo "<br>";
+                        echo "query inserted successfully";
+                    }
+                    else{
+                        echo "please register in the new registers link";
+                    }
                 }
+
             }
             $sql2="delete from complaintstable where level=0";
             $result=$conn->query($sql2);
-
             ?>
             <br><br>
             <br><br>                
@@ -107,7 +129,8 @@
 
         
         <div class="col-sm-8">
-            
+                <a href="newuser.php">Click for New User login</a>
+                <br><br>
                 <a href="admin.php">Click for admin login</a>
                 <br><br>
                 <a href="workers.php">Click for workers login.</a>

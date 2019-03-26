@@ -41,7 +41,6 @@
             </thead>
             <tbody>
         <?php
-
         $host="localhost";
         $dbusername="root";
         $dbpassword="";
@@ -51,7 +50,6 @@
             echo "connection lost";
         }
         else{
-
             $sql="delete from complaintstable where level=0";
             $result=$conn->query($sql);
             $sql2="select * from complaintstable";
@@ -74,7 +72,6 @@
                 }
             }
         }
-
 ?>
         </tbody>
         </table>
